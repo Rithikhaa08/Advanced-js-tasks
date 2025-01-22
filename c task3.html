@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+    function createCounter() {
+    let count = 0; 
+    return {
+        increment: function () {
+            count++; // Increment the private count
+        },
+        getCount: function () {
+            return count; // Return the current count
+        }
+    };
+}
+
+// Create multiple independent counters
+const counter1 = createCounter();
+const counter2 = createCounter();
+// Use the first counter
+counter1.increment();
+counter1.increment();
+console.log("Counter 1:", counter1.getCount()); // Output: 2
+
+// Use the second counter
+counter2.increment();
+console.log("Counter 2:", counter2.getCount()); // Output: 1
+
+// The counters are independent of each other
+counter1.increment();
+console.log("Counter 1:", counter1.getCount()); // Output: 3
+console.log("Counter 2:", counter2.getCount()); // Output: 1
+</script>
+    </body></html>

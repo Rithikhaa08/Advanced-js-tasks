@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            let obj1={
+                a:1,
+                b:2
+            }
+            let obj2={
+                c:3,
+                d:4
+            }
+            function mergeobj(obj1,obj2)
+            {
+                return {...obj1,...obj2};
+            }
+            console.log(mergeobj(obj1,obj2));
+        </script>
+    </body>
+</html>

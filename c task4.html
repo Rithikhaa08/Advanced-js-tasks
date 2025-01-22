@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function privateVariableExample() {
+    let privateVar = "This is private!";
+    return {
+        getPrivateVar: function () {
+            return privateVar;
+        },
+        setPrivateVar: function (newValue) {
+            privateVar = newValue;
+        }
+    };
+}
+const privateExample = privateVariableExample();
+console.log(privateExample.getPrivateVar()); // Output: "This is private!"
+privateExample.setPrivateVar("New private value");
+console.log(privateExample.getPrivateVar());// Output: "New private value"
+        </script>
+    </body>
+</html>

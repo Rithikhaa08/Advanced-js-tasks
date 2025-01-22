@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        function deepClone(original)
+        {
+            return JSON.parse(JSON.stringify(original));
+        }
+        const original = { 
+            name:"rithu",
+            age:21
+        }
+        const clone = deepClone(original);
+        console.log(clone);
+        </script>
+    </body>
+</html>

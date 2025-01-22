@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            console.log(flattenArray([1, [2, [3, 4]], 5]));
+           function flattenArray(arr) {
+    let result = [];
+    arr.forEach(item => {
+        if (Array.isArray(item)) {
+            result = result.concat(flattenArray(item)); // Recursive case
+        } else {
+            result.push(item); // Base case
+        }
+    });
+    return result;
+}
+
+        </script>
+    </body>
+</html>

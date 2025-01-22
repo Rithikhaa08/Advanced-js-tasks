@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+        function functionFactory(operation) 
+        {
+        return function (a, b) 
+        {
+        if (operation === "add") 
+        {
+            return a + b;
+        } 
+        else if (operation === "multiply") 
+        {
+            return a * b;
+        } 
+        else 
+        {
+            return "Invalid operation!";
+        }
+    };
+}
+const adder = functionFactory("add");
+const multiplier = functionFactory("multiply");
+console.log(adder(2, 3));      
+console.log(multiplier(2, 3)); 
+        </script>
+    </body>
+</html>

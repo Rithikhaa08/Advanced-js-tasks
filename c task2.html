@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function counter()
+            {
+            let c=0;
+            return function count()
+            {
+                return ++c;
+            };
+        }
+        const cout=counter();
+            console.log(cout());
+        </script>
+    </body>
+</html>
